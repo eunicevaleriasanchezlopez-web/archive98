@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acceso Restringido</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+
+background:#0d0d0d;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+
+}
+
+.caja{
+
+width:420px;
+background:#18221c;
+padding:35px;
+border-radius:20px;
+text-align:center;
+box-shadow:0px 0px 25px rgba(0,255,100,.2);
+
+}
+
+h1{
+
+color:#9dd39d;
+margin-bottom:10px;
+
+}
+
+p{
+
+color:white;
+margin-bottom:15px;
+
+}
+
+input{
+
+width:100%;
+padding:12px;
+border:none;
+border-radius:10px;
+background:#27352b;
+color:white;
+font-size:18px;
+
+}
+
+button{
+
+margin-top:18px;
+width:100%;
+padding:12px;
+border:none;
+border-radius:10px;
+background:#2f6f4f;
+color:white;
+font-size:18px;
+cursor:pointer;
+transition:.3s;
+
+}
+
+button:hover{
+
+background:#48996b;
+
+}
+
+#mensaje{
+
+margin-top:18px;
+color:white;
+
+}
+
+img{
+
+width:100%;
+margin-top:20px;
+border-radius:15px;
+display:none;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="caja">
+
+<h1>🔒 Acceso Privado</h1>
+
+<p>Ingresa el código para continuar</p>
+
+<input id="codigo" type="password" placeholder="Código">
+
+<button onclick="verificar()">
+Desbloquear
+</button>
+
+<p id="mensaje"></p>
+
+<img id="foto" src="BHTDpng.png">
+
+</div>
+
+<script>
+
+function verificar(){
+
+let codigo=document.getElementById("codigo").value;
+
+if(codigo=="192898"){
+
+document.getElementById("foto").style.display="block";
+document.getElementById("mensaje").innerHTML="✨ Acceso concedido";
+
+}else{
+
+document.getElementById("mensaje").innerHTML="❌ Código incorrecto";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
